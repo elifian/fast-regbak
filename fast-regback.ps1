@@ -42,6 +42,9 @@ $shortcut.TargetPath = "$destPath\RegBak.exe"
 $shortcut.IconLocation = "$destPath\RegBak.exe, 0"
 $shortcut.Save()
 
+# Запуск RegBak.exe
+Start-Process -FilePath "$destPath\RegBak.exe"
+
 # Очистка временных файлов
 Remove-Item -Path $zipPath -Force
 Remove-Item -Path $extractPath -Recurse -Force
