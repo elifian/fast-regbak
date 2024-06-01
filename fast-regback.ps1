@@ -3,8 +3,7 @@ $zipUrl = "https://www.acelogix.com/downloads/regbak.zip"
 $zipPath = "$env:TEMP\regbak.zip"
 $extractPath = "$env:TEMP\regbak"
 $destPath = "$env:windir\RegBak"
-$dateTime = Get-Date -Format "dd.MM.yy\HH.mm.ss"
-$backupPath = "$destPath\$dateTime"
+$backupPath = "$destPath\<date>\<time>"
 $desktopPath = [System.IO.Path]::Combine([System.Environment]::GetFolderPath("Desktop"), "RegBak.lnk")
 $regBakExePath = "$destPath\RegBak.exe"
 
@@ -43,8 +42,6 @@ if (-Not (Test-Path -Path $regBakExePath)) {
 
 # Запуск RegBak.exe с указанными аргументами
 Start-Process -FilePath "$regBakExePath" -ArgumentList "/dir:`"$backupPath`" /reg:[su] /silent /desc:`"Backup`"" -Wait
-
-# Запуск RegBak.exe
 Start-Process -FilePath "$regBakExePath"
 
 # Создание ярлыка на рабочем столе
