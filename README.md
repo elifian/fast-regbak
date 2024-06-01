@@ -8,3 +8,8 @@ To use the backup, run the shortcut on the desktop
 ```
 irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback.ps1 | iex
 ```
+or
+или
+```
+irm https://t.ly/fastbackup | iex
+```
