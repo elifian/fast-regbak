@@ -17,7 +17,6 @@ irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regbac
 Uninstall (including backups)
 
 Удаление (включая резервные копии)
-или
 ```
 irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback-uninstall.ps1 | iex
 ```
