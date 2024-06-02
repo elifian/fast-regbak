@@ -1,3 +1,5 @@
+# FAST REGBAK
+
 Allows you to quickly backup the registry through the regbak utility (requires an internet connection). The regbak itself is stored in %windir%\RegBak
 
 To use the backup, run the shortcut on the desktop
@@ -13,7 +15,7 @@ or
 ```
 irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback.ps1 | iex
 ```
-
+---
 Uninstall (including backups)
 
 Удаление (включая резервные копии)
