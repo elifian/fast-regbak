@@ -42,11 +42,17 @@ if (-Not (Test-Path -Path $regBakExePath)) {
 
 # Запуск RegBak.exe с указанными аргументами
 Start-Process -FilePath "$regBakExePath" -ArgumentList "/dir:`"$backupPath`" /reg:[su] /silent /desc:`"Backup`"" -Wait
+
+# Запуск меню RegBak
 Start-Process -FilePath "$regBakExePath"
 
-# Создание ярлыка на рабочем столе
-$WScriptShell = New-Object -ComObject WScript.Shell
-$shortcut = $WScriptShell.CreateShortcut($desktopPath)
-$shortcut.TargetPath = "$regBakExePath"
-$shortcut.IconLocation = "$regBakExePath, 0"
-$shortcut.Save()
+# Проверка существования regbak-desktop.ini
+if (-Not (Test-Path -Path $destPath\regbak-desktop.ini)) {
+    # Создание ярлыка на рабочем столе
+    $WScriptShell = New-Object -ComObject WScript.Shell
+    $shortcut = $WScriptShell.CreateShortcut($desktopPath)
+    $shortcut.TargetPath = "$regBakExePath"
+    $shortcut.IconLocation = "$regBakExePath, 0"
+    $shortcut.Save()
+    New-Item -Path $destPath -Name "regbak-desktop.ini" -ItemType "file"
+    }
