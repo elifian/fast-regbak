@@ -6,10 +6,22 @@ To use the backup, run the shortcut on the desktop
 
 Чтобы использовать бэкап, запустите ярлык на рабочем столе
 ```
-irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback.ps1 | iex
+irm https://t.ly/fastbackup | iex
 ```
 or
 или
 ```
-irm https://t.ly/fastbackup | iex
+irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback.ps1 | iex
+```
+
+Uninstall (including backups)
+
+Удаление (включая резервные копии)
+```
+irm https://t.ly/ufastbackup | iex
+```
+or
+или
+```
+irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback-uninstall.ps1 | iex
 ```
