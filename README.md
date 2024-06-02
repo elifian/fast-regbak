@@ -8,11 +8,6 @@ To use the backup, run the shortcut on the desktop
 
 Чтобы использовать бэкап, запустите ярлык на рабочем столе
 ```
-irm https://t.ly/fastbackup | iex
-```
-or
-или
-```
 irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback.ps1 | iex
 ```
 ---
