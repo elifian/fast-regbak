@@ -8,12 +8,12 @@ To use the backup, run the shortcut on the desktop
 
 Чтобы использовать бэкап, запустите ярлык на рабочем столе
 ```
-irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback.ps1 | iex
+irm https://raw.githubusercontent.com/elifian/fast-regbak/main/fast-regback.ps1 | iex
 ```
 ---
 Uninstall (including backups)
 
 Удаление (включая резервные копии)
 ```
-irm https://raw.githubusercontent.com/vasilyvaganov/fast-regbak/main/fast-regback-uninstall.ps1 | iex
+irm https://raw.githubusercontent.com/elifian/fast-regbak/main/fast-regback-uninstall.ps1 | iex
 ```
